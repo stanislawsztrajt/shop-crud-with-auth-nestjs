@@ -9,8 +9,15 @@ import { AppService } from './app.service';
 import { AppController } from './app.controller';
 import { UsersModule } from './users/users.module';
 import { ProductsModule } from './products/products.module';
+import { AuthModule } from './auth/auth.module';
 @Module({
-  imports: [ConfigModule.forRoot(), MongooseModule.forRoot(process.env.DATABASE_URL), UsersModule, ProductsModule],
+  imports: [
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.DATABASE_URL),
+    UsersModule,
+    ProductsModule,
+    AuthModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
