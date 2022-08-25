@@ -20,14 +20,14 @@ export class ProductsService {
   }
 
   create(createProductDto: CreateProductDto): Promise<Product> {
-    return this.productModel.create(createProductDto)
+    return this.productModel.create(createProductDto);
   }
 
   findByIdAndUpdate(id: string, updateProductDto: UpdateProductDto) {
-    return this.productModel.findByIdAndUpdate(id, updateProductDto)
+    return this.productModel.findByIdAndUpdate(id, updateProductDto);
   }
 
   findByIdAndDelete(id: string) {
-    return this.productModel.findByIdAndDelete(id)
+    return this.productModel.findByIdAndDelete(id);
   }
 }
